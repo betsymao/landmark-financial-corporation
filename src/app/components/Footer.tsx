@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import {
   Box,
   Container,
+  Flex,
   Link,
   SimpleGrid,
   Stack,
@@ -88,6 +89,27 @@ export default function Footer() {
           </Stack>
         </SimpleGrid>
       </Container>
+      {/* <Box
+        bg={useColorModeValue('gray.50', 'gray.900')}
+        color={useColorModeValue('gray.700', 'gray.200')}>
+          <Text pt={6} fontSize={'sm'} textAlign={'center'}>
+          © 2022 Chakra Templates. All rights reserved
+        </Text>
+      </Box> */}
+            <Box py={10}>
+        <Flex
+          align={'center'}
+          _before={{
+            content: '""',
+            borderBottom: '1px solid',
+            borderColor: useColorModeValue('gray.200', 'gray.700'),
+            flexGrow: 1,
+          }}>
+        </Flex>
+        <Text pt={6} fontSize={'sm'} textAlign={'center'}>
+          © 2022 Chakra Templates. All rights reserved.
+        </Text>
+      </Box>
     </Box>
   );
 }
