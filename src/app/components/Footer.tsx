@@ -46,7 +46,7 @@ export default function Footer() {
             </Text> */}
           </Stack>
           <Stack align={'flex-start'}>
-            <ListHeader>About Us</ListHeader>
+            <ListHeader>About</ListHeader>
             <Link href={'#'}>Why choose us?</Link>
             <Link href={'#'}>Director</Link>
             <Link href={'#'}>Lending Partners</Link>
