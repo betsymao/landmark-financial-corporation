@@ -57,7 +57,7 @@ export default function Navbar() {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} alignItems='center'>
             <Button as={'a'} href="/" variant={'link'} textAlign={'center'}>
-              <Image src='logo.svg' alt='Landmark Financial Corporation' />
+              <Image src='/logo.svg' alt='Landmark Financial Corporation' />
             </Button>
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
@@ -258,15 +258,15 @@ const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: 'Why choose us?',
-        href: '#',
+        href: '/about/overview',
       },
       {
         label: 'Director',
-        href: '#',
+        href: '/about/director',
       },
       {
         label: 'Lending Partners',
-        href: '#',
+        href: '/about/partners',
       },
     ],
   },
@@ -275,19 +275,19 @@ const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: 'First Home Buyers',
-        href: '#',
+        href: '/services/first-home-buyers',
       },
       {
         label: 'Home Upgrade',
-        href: '#',
+        href: '/services/home-upgrade',
       },
       {
         label: 'Refinancing',
-        href: '#',
+        href: '/services/refinancing',
       },
       {
         label: 'Investment Property Loans',
-        href: '#',
+        href: '/services/investment-property-loans',
       },
     ],
   },

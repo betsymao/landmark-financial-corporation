@@ -31,7 +31,7 @@ export default function Footer() {
           spacing={8}>
           <Stack spacing={6}>
             <Box>
-              <Image src='logo.svg' alt='Landmark Financial Corporation' />
+              <Image src='/logo.svg' alt='Landmark Financial Corporation' />
             </Box>
             <Text fontSize={'sm'}>
               Suite 1137/Corner Carrington Road & Thurston Street Box Hill VIC 3128
@@ -47,16 +47,16 @@ export default function Footer() {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>About</ListHeader>
-            <Link href={'#'}>Why choose us?</Link>
-            <Link href={'#'}>Director</Link>
-            <Link href={'#'}>Lending Partners</Link>
+            <Link href={'/about/overview'}>Why choose us?</Link>
+            <Link href={'/about/director'}>Director</Link>
+            <Link href={'/about/partners'}>Lending Partners</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Services</ListHeader>
-            <Link href={'#'}>First Home Buyers</Link>
-            <Link href={'#'}>Home Upgrade</Link>
-            <Link href={'#'}>Refinancing</Link>
-            <Link href={'#'}>Investment Property Loans</Link>
+            <Link href={'/services/first-home-buyers'}>First Home Buyers</Link>
+            <Link href={'/services/home-upgrade'}>Home Upgrade</Link>
+            <Link href={'/services/refinancing'}>Refinancing</Link>
+            <Link href={'/services/investment-property-loans'}>Investment Property Loans</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Mortgage Resources</ListHeader>
