@@ -57,7 +57,7 @@ export default function Navbar() {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} alignItems='center'>
             <Button as={'a'} href="/" variant={'link'} textAlign={'center'}>
-              <Image src='header-logo.svg' alt='Landmark Financial Corporation' />
+              <Image src='logo.svg' alt='Landmark Financial Corporation' />
             </Button>
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
