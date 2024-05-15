@@ -21,6 +21,7 @@ import {
   CloseIcon,
   ChevronDownIcon,
   ChevronRightIcon,
+  EmailIcon,
 } from '@chakra-ui/icons';
 
 import { Image } from '@chakra-ui/react'
@@ -31,6 +32,7 @@ export default function Navbar() {
   return (
     <Box>
       <Flex
+        alignItems={'center'}
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
@@ -54,16 +56,9 @@ export default function Navbar() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} alignItems='center'>
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            
-            <Button as={'a'} href="/" variant={'link'}>
+            <Button as={'a'} href="/" variant={'link'} textAlign={'center'}>
               <Image src='header-logo.svg' alt='Landmark Financial Corporation' />
             </Button>
-          </Text>
-
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
           </Flex>
@@ -83,17 +78,18 @@ export default function Navbar() {
             href={'#'}>
             Sign In
           </Button> */}
-          <Button
+          <Button 
             as={'a'}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'pink.400'}
             href='/contact'
+            fontSize={'xl'}
+            // fontWeight={600}
+            color={'grey'}
+            bg={'white'}
             _hover={{
-              bg: 'pink.300',
+              // bg: 'grey',
+              color: 'black',
             }}>
-            Contact
+              <EmailIcon />
           </Button>
         </Stack>
       </Flex>
