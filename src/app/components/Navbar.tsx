@@ -1,5 +1,6 @@
 import {
   Box,
+  Container,
   Flex,
   Text,
   IconButton,
@@ -30,81 +31,72 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
-      <Flex
-        alignItems={'center'}
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
-        minH={'60px'}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}>
+    <Box bg={'blackAlpha.900'} color={'white'}>
+      <Container as={Stack} maxW={'6xl'} py={10}>
         <Flex
-          flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}>
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
-          />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} alignItems='center'>
-            <Button as={'a'} href="/" variant={'link'} textAlign={'center'}>
-              <Image src='/logo.svg' alt='Landmark Financial Corporation' />
-            </Button>
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            <DesktopNav />
+          alignItems={'center'}
+          align={'center'}>
+          <Flex
+            flex={{ base: 1, md: 'auto' }}
+            ml={{ base: -2 }}
+            display={{ base: 'flex', md: 'none' }}>
+            <IconButton
+              onClick={onToggle}
+              icon={
+                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+              }
+              color={'white'}
+              bg={'yellow.500'}
+              aria-label={'Toggle Navigation'}
+              _hover={{
+                bg: 'white',
+                color: 'yellow.500',
+              }}
+            />
           </Flex>
-        </Flex>
+          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} alignItems='center'>
+              <Button as={'a'} href="/" variant={'link'} textAlign={'center'}>
+                <Image src='/logo.svg' alt='Landmark Financial Corporation' />
+              </Button>
+            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+              <DesktopNav />
+            </Flex>
+          </Flex>
 
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}>
-          {/* <Button
-            as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            href={'#'}>
-            Sign In
-          </Button> */}
-          <Button 
-            as={'a'}
-            href='/contact'
-            fontSize={'xl'}
-            // fontWeight={600}
-            color={'grey'}
-            bg={'white'}
-            _hover={{
-              // bg: 'grey',
-              color: 'black',
-            }}>
-              <EmailIcon />
-          </Button>
-        </Stack>
-      </Flex>
+          <Stack
+            flex={{ base: 1, md: 0 }}
+            justify={'flex-end'}
+            direction={'row'}
+            spacing={6}>
+            <Button 
+              as={'a'}
+              href='/contact'
+              fontSize={'2xl'}
+              color={'white'}
+              bg={'yellow.500'}
+              _hover={{
+                bg: 'white',
+                color: 'yellow.500',
+              }}
+            >
+                <EmailIcon />
+            </Button>
+          </Stack>
+        </Flex>
 
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
+
+      </Container>
     </Box>
   );
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200');
-  const linkHoverColor = useColorModeValue('gray.800', 'white');
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+  const linkColor = 'white';
+  const linkHoverColor = 'yellow.500';
+  const popoverContentBgColor = 'blackAlpha.900';
 
   return (
     <Stack direction={'row'} spacing={4}>
@@ -156,12 +148,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      _hover={{ bg: 'transparent' }}
+      >
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
             transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
+            _groupHover={{ color: 'yellow.500' }}
             fontWeight={500}>
             {label}
           </Text>
@@ -175,7 +168,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           justify={'flex-end'}
           align={'center'}
           flex={1}>
-          <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={'yellow.500'} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Link>
@@ -185,7 +178,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'gray.800')}
+      bg={'transparent'}
       p={4}
       display={{ md: 'none' }}>
       {NAV_ITEMS.map((navItem) => (
@@ -211,7 +204,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         }}>
         <Text
           fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}>
+          color={'white'}>
           {label}
         </Text>
         {children && (
@@ -231,7 +224,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           pl={4}
           borderLeft={1}
           borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
+          borderColor={'whiteAlpha.400'}
           align={'start'}>
           {children &&
             children.map((child) => (
