@@ -1,6 +1,6 @@
 import { Container, Box, Heading, Text, VStack } from "@chakra-ui/react";
 
-// import Partner from "../../components/partners";
+import Partners from "../../components/partners";
 
 function About() {
   return (
@@ -52,7 +52,7 @@ function About() {
           </Text>
         </Container>
       </Box>
-      {/* <Partners /> */}
+      <Partners />
     </>
   );
 }
