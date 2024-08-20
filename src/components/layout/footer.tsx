@@ -52,7 +52,10 @@ function Footer() {
               </Link>
             </Box>
             <Box>
-              <Link to="/contact" className="footerNavLink">
+              <Link
+                to="mailto:law@landmarkfinancial.com.au"
+                className="footerNavLink"
+              >
                 Contact Us
               </Link>
             </Box>
