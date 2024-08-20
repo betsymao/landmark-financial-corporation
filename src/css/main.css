@@ -1,0 +1,99 @@
+.mobileNav:not(:first-child) {
+  padding: 1.25rem 0 0 0;
+}
+.mobileNav .mobileNavLink:hover {
+  color: #d69e2e;
+}
+.mobileNav:nth-child(2) .mobileNavLink, .mobileNav:nth-child(3) .mobileNavLink {
+  cursor: default;
+}
+.mobileNav:nth-child(2) .mobileNavLink:hover, .mobileNav:nth-child(3) .mobileNavLink:hover {
+  color: inherit;
+}
+
+.mobileNavChildLink:hover {
+  color: #d69e2e;
+}
+
+.footerNavLink:hover {
+  color: #d69e2e;
+}
+
+.hero {
+  position: relative;
+}
+.hero::before {
+  content: "";
+  background: #000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+}
+.hero .hero__heading,
+.hero .hero__text {
+  z-index: 1;
+}
+.hero .hero__cta {
+  padding: 1.5rem 3rem 1.5rem 1.5rem;
+  position: relative;
+}
+.hero .hero__cta .hero__cta-icon {
+  position: absolute;
+  right: 1rem;
+  top: 0.9rem;
+  transition: transform 0.25s ease-out;
+}
+.hero .hero__cta:hover .hero__cta-icon {
+  transform: translate(25%);
+}
+
+.about {
+  position: relative;
+}
+.about::before {
+  content: "";
+  background: #000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+}
+.about .about__heading,
+.about .about__text {
+  z-index: 1;
+}
+.about .about__cta {
+  padding: 1.5rem 3rem 1.5rem 1.5rem;
+  position: relative;
+}
+.about .about__cta .about__cta-icon {
+  position: absolute;
+  right: 1rem;
+  top: 0.9rem;
+  transition: transform 0.25s ease-out;
+}
+.about .about__cta:hover .about__cta-icon {
+  transform: translate(25%);
+}
+
+.banner {
+  position: relative;
+}
+.banner::before {
+  content: "";
+  background: #000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+}
+.banner .banner__heading,
+.banner .banner__text {
+  z-index: 1;
+}
+
+/*# sourceMappingURL=main.css.map */
