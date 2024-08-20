@@ -42,14 +42,14 @@ function Footer() {
           <Stack align={"flex-start"}>
             <ListHeader>Our Company</ListHeader>
             <Box>
-              <Link to="/about" className="footerNavLink">
+              <Text as="a" href="/about" className="footerNavLink">
                 About Us
-              </Link>
+              </Text>
             </Box>
             <Box>
-              <Link to="/about/#partners" className="footerNavLink">
+              <Text as="a" href="/about/#partners" className="footerNavLink">
                 Partners
-              </Link>
+              </Text>
             </Box>
             <Box>
               <Link

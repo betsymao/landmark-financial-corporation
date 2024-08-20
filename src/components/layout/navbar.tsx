@@ -84,7 +84,7 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Link to={navItem.href ?? ""}>
+              <Text as="a" href={navItem.href ?? ""}>
                 <Text
                   fontSize={{ md: "md", lg: "lg" }}
                   fontWeight={600}
@@ -96,7 +96,7 @@ const DesktopNav = () => {
                 >
                   {navItem.label}
                 </Text>
-              </Link>
+              </Text>
             </PopoverTrigger>
 
             {navItem.children && (
@@ -174,11 +174,11 @@ const MobileNav = () => {
 const MobileNavItem = ({ label, children, href }: NavItem) => {
   return (
     <Stack spacing={0} className="mobileNav">
-      <Link to={href ?? ""} className="mobileNavItem">
+      <Text as="a" href={href ?? ""} className="mobileNavItem">
         <Text fontWeight={600} color={"black"} className="mobileNavLink">
           {label}
         </Text>
-      </Link>
+      </Text>
 
       <Stack spacing={0}>
         {children &&
