@@ -28,10 +28,8 @@ function About() {
           height={"100%"}
           spacing={{ base: "1rem", md: "2rem" }}
         >
-          <Heading className="about__heading">
-            Professionalised Mortgage Services
-          </Heading>
-          <Text className="about__text">
+          <Heading className="about__heading">Why choose us?</Heading>
+          <Text className="about__text" fontSize={{ base: "lg", md: "xl" }}>
             Navigating the mortgage market can be overwhelming, but with our
             professional mortgage broker comparison services, you can make
             informed choices with ease. Our team is dedicated to helping you
@@ -39,6 +37,7 @@ function About() {
           </Text>
           <Button
             className="about__cta"
+            fontSize={{ base: "md", md: "lg" }}
             as="a"
             href="/about"
             bgColor="yellow.500"
