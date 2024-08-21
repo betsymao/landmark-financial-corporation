@@ -29,13 +29,11 @@ function Navbar() {
           {/* Navbar items: logo and nav */}
           <Flex flex={{ base: 1 }} align={"center"} justify={"space-between"}>
             {/* Brand logo */}
-            <Box>
-              <Link to="/">
-                <Image
-                  src="/assets/logos/logo.svg"
-                  alt="Landmark Financial Corporation"
-                />
-              </Link>
+            <Box as="a" href="/">
+              <Image
+                src="/assets/logos/logo.svg"
+                alt="Landmark Financial Corporation"
+              />
             </Box>
 
             {/* Desktop nav */}

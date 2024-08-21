@@ -47,11 +47,6 @@ function Footer() {
               </Text>
             </Box>
             <Box>
-              <Text as="a" href="/about/#partners" className="footerNavLink">
-                Partners
-              </Text>
-            </Box>
-            <Box>
               <Link
                 to="mailto:law@landmarkfinancial.com.au"
                 className="footerNavLink"
@@ -98,7 +93,9 @@ function Footer() {
             </Flex>
             <Flex alignItems={"center"}>
               <Icon as={BsEnvelope} mr={"4"} />
-              <Text>law@landmarkfinancial.com.au</Text>
+              <Text as="a" href="mailto:law@landmarkfinancial.com.au">
+                law@landmarkfinancial.com.au
+              </Text>
             </Flex>
           </Stack>
         </SimpleGrid>
