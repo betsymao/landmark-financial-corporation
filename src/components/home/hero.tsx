@@ -47,6 +47,7 @@ function Hero() {
               className="hero__cta"
               as="a"
               href="/about"
+              fontSize={{ base: "md", md: "lg" }}
               bgColor="yellow.500"
               border="1px"
               borderColor="transparent"
@@ -69,6 +70,7 @@ function Hero() {
             <Button
               className="hero__cta"
               as="a"
+              fontSize={{ base: "md", md: "lg" }}
               href="#services"
               bgColor="yellow.500"
               border="1px"

@@ -38,7 +38,7 @@ const Card = ({ heading, description, href }: CardProps) => {
         <Stack align={"start"} justify={"space-between"} spacing={2}>
           <Box mt={2}>
             <Heading size="md">{heading}</Heading>
-            <Text mt={1} fontSize={"sm"}>
+            <Text mt={1} fontSize={{ base: "md", md: "lg" }}>
               {description}
             </Text>
           </Box>
@@ -46,6 +46,7 @@ const Card = ({ heading, description, href }: CardProps) => {
           <Text
             className="services__link"
             fontWeight={"bold"}
+            fontSize={{ base: "md", md: "lg" }}
             _hover={{
               color: "gray.500",
             }}
